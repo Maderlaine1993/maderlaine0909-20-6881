@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Creando ruta del formulario de criptomonedas
+Route::get('/form','CriptomonedaController@criptomonedaform');
+
+//Creando ruta de guardar criptomonedas
+Route::post('/save', 'CriptomonedaController@save') ->name('save');
+
+
+

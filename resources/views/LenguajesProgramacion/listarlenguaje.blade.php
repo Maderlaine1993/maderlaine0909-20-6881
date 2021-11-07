@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <h2 class="text-center font-weight-bold mb-3"> Lenguajes Guardados </h2>
-                <a class="btn btn-success font-weight-bold mb-2" href="{{url('/lenguajelist') }}"> Registrar lenguaje </a>
+                <a class="btn btn-success font-weight-bold mb-2" href="{{url('/lenguajeform') }}"> Registrar lenguaje </a>
 
                 <table class="table table-bordered table-striped table-light table-hover text-center">
                     <thead>

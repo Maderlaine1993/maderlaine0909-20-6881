@@ -10,6 +10,16 @@ use Illuminate\Support\Facades\Storage;
 
 class CriptomonedaController extends Controller
 {
+    //Listado de criptomonedas
+    public function list()
+    {
+        $criptomonedas = DB::table('criptomoneda')
+            ->join('lenguaje_programacion', 'criptomoneda.lenguaje_id', '=', 'lenguaje_programacion.id_lenguaje')
+            ->select('criptomoneda.*', 'lenguaje_programacion.descripcion_lp')
+            ->paginate(5);
+        return view('Criptomonedas.listarcriptomoneda', compact('criptomonedas'));
+    }
+
     //Formulario de criptomonedas
     public function criptomonedaform(){
         $lenguaje=Lenguaje_Programacion::all();

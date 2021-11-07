@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Creando ruta de listar
+Route::get('/', 'CriptomonedaController@list');
 
 //Creando ruta del formulario de criptomonedas
 Route::get('/form','CriptomonedaController@criptomonedaform');

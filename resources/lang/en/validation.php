@@ -157,6 +157,11 @@ return [
             'required' => 'El lenguaje es requerido',
             'string'=> 'El lenguaje tiene que ser un texto',
         ],
+
+        'descripcion_lp' => [
+            'required' => 'La descripcion es requerida',
+            'string'=> 'La descripcion tiene que ser un texto',
+        ],
     ],
 
     /*

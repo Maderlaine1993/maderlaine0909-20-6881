@@ -6,6 +6,13 @@
                 <h2 class="text-center font-weight-bold mb-3"> Lenguajes Guardados </h2>
                 <a class="btn btn-success font-weight-bold mb-2" href="{{url('/lenguajeform') }}"> Registrar lenguaje </a>
 
+                <!--Mensaje de Alerta-->
+                @if(session('lenguajeEliminado'))
+                    <div class="alert alert-danger">
+                        {{session('LenguajeEliminado')}}
+                    </div>
+                @endif
+
                 <table class="table table-bordered table-striped table-light table-hover text-center">
                     <thead>
                     <tr class="table-info font-weight-bold">
@@ -21,7 +28,9 @@
                             <td>{{$lenguaje->descripcion_lp}}</td>
                             <td>
                                 <div class="btn-group">
-
+                                    <a class="btn btn-primary mb-2 mr-3" href="{{route('editarlenguaje', $lenguaje->id_lenguaje)}}">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
                                     <form action="{{route('deletelp', $lenguaje->id_lenguaje)}}" method="POST">
                                         @csrf @method('DELETE')
                                         <button type="submit" onclick="return confirm('Desea eliminar el registro')" class="btn btn-danger">

@@ -41,3 +41,9 @@ Route::post('/savelenguaje', 'LenguajeController@savelenguaje')->name('savelengu
 
 //Creando ruta para eliminar lenguajes de programacion
 Route::delete('/deletelp/{id_lenguaje}', 'LenguajeController@deletelp') ->name('deletelp');
+
+//Creando ruta para el formulario de editar lenguajes
+Route::get('/editarlenguaje/{id_lenguaje}', 'LenguajeController@editarlenguaje') ->name('editarlenguaje');
+
+//Creando ruta para editar lenguajes
+Route::patch('/editar/{id_lenguaje}', 'LenguajeController@editar')-> name('editar');

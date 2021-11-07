@@ -37,4 +37,17 @@ class LenguajeController extends Controller
         Lenguaje_Programacion::destroy($id_lenguaje);
         return back()->with('lenguajeEliminado','Lenguaje Eliminado');
     }
+
+    public function editarlenguaje($id_lenguaje){
+        $lenguaje = Lenguaje_Programacion::findOrFail($id_lenguaje);
+        return view('LenguajesProgramacion.editarlenguaje', compact('lenguaje'));
+    }
+
+    //Creamos funcion para modificar el registro de criptomonedas
+    public function editar(Request $request,$id_lenguaje){
+
+        $dataLenguaje=request()->except((['_token', '_method']));
+        Lenguaje_Programacion::where('id_lenguaje','=', $id_lenguaje)->update($dataLenguaje);
+        return back()->with('lenguajeModificado', 'Lenguaje Modificado');
+    }
 }

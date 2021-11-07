@@ -9,7 +9,7 @@
                 <!--Mensaje de Alerta-->
                 @if(session('lenguajeEliminado'))
                     <div class="alert alert-danger">
-                        {{session('LenguajeEliminado')}}
+                        {{session('lenguajeEliminado')}}
                     </div>
                 @endif
 

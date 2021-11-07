@@ -65,4 +65,25 @@ class CriptomonedaController extends Controller
         return back()->with('criptomonedaEliminada','Criptomoneda Eliminada');
     }
 
+    //Creamos funcion para el formulario de modificar
+    public function editcriptomoneda($id){
+        $lenguaje=Lenguaje_Programacion::all();
+        $criptomoneda = Criptomoneda::findOrFail($id);
+        return view('Criptomonedas.editarcriptomoneda', compact('criptomoneda', 'lenguaje'));
+    }
+
+    //Creamos funcion para modificar el registro de criptomonedas
+    public function edit(Request $request,$id){
+        $dataCriptomoneda=request()->except((['_token', '_method']));
+
+        //Subimos la imagen ingresada para agregar a la criptomoneda
+        if($request->hasFile('logotipo')){
+            $criptomoneda = Criptomoneda::findOrFail($id);
+            Storage::delete('public/'.$criptomoneda->logotipo);
+            $dataCriptomoneda['logotipo']= $request->file('logotipo')->store('logotipos', 'public');
+        }
+
+        Criptomoneda::where('id','=', $id)->update($dataCriptomoneda);
+        return back()->with('criptomonedaModificada', 'Criptomoneda Modificada');
+    }
 }

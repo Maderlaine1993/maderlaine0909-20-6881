@@ -6,6 +6,13 @@
                 <h2 class="text-center font-weight-bold mb-3"> Criptomonedas Guardadas </h2>
                 <a class="btn btn-success font-weight-bold mb-5" href="{{url('/form') }}"> Registrar criptomonedas </a>
 
+                <!--Mensaje de Alerta-->
+                @if(session('criptomonedaEliminada'))
+                    <div class="alert alert-danger">
+                        {{session('criptomonedaEliminada')}}
+                    </div>
+                @endif
+
                 <table class="table table-bordered table-striped table-light table-hover text-center">
                     <thead>
                     <tr class="table-info font-weight-bold">
@@ -29,7 +36,9 @@
                             <td>{{$criptomoneda->descripcion_lp}}</td>
                             <td>
                                 <div class="btn-group">
-
+                                    <a class="btn btn-primary mb-2 mr-3" href="{{route('editcriptomoneda', $criptomoneda->id)}}">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
                                     <form action="{{route('delete', $criptomoneda->id)}}" method="POST">
                                         @csrf @method('DELETE')
                                         <button type="submit" onclick="return confirm('Desea eliminar el registro')" class="btn btn-danger">

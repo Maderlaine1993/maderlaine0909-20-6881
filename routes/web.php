@@ -24,6 +24,11 @@ Route::post('/save', 'CriptomonedaController@save') ->name('save');
 //Creando ruta para eliminar criptomonedas
 Route::delete('/delete/{id}', 'CriptomonedaController@delete') ->name('delete');
 
+//Creando ruta para el formulario de editar criptomonedas
+Route::get('/editform/{id}', 'CriptomonedaController@editcriptomoneda') ->name('editcriptomoneda');
+
+//Creando ruta para editar el criptomoneda
+Route::patch('/edit/{id}', 'CriptomonedaController@edit')-> name('edit');
 
 
 

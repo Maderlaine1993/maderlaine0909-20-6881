@@ -130,8 +130,32 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'logotipo' => [
+            'required' => 'El logotipo es requerido',
+            'string'=> 'El logotipo tiene que ser una imagen',
+            'max:105'=> 'El logotipo es demasiado largo'
+        ],
+
+        'nombre' => [
+            'required' => 'El nombre es requerido',
+            'string'=> 'El nombre tiene que ser un texto',
+            'max:45'=> 'El nombre es demasiado largo'
+        ],
+
+        'precio' => [
+            'required' => 'El precio es requerido',
+            'float'=> 'El precio tiene que ser un numero',
+        ],
+
+        'descripcion' => [
+            'required' => 'La descripcion es requerida',
+            'string'=> 'La descripcion tiene que ser un texto',
+            'max:200'=> 'La descripcion es demasiada larga'
+        ],
+
+        'lenguaje_id' => [
+            'required' => 'El lenguaje es requerido',
+            'string'=> 'El lenguaje tiene que ser un texto',
         ],
     ],
 

@@ -16,7 +16,6 @@ class CreateLenguajeProgramacionTable extends Migration
         Schema::create('lenguaje_programacion', function (Blueprint $table) {
             $table->bigIncrements('id_lenguaje');
             $table->string('descripcion_lp');
-            $table->timestamps();
         });
     }
 

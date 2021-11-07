@@ -12,8 +12,8 @@ class CriptomonedaController extends Controller
 {
     //Formulario de criptomonedas
     public function criptomonedaform(){
-        $criptomoneda=Criptomoneda::all();
-        return view('Criptomonedas.criptomonedaform', compact('criptomoneda'));
+        $lenguaje=Lenguaje_Programacion::all();
+        return view('Criptomonedas.criptomonedaform', compact('lenguaje'));
     }
 
     //Guardar criptomonedas
@@ -39,7 +39,7 @@ class CriptomonedaController extends Controller
             'nombre'=> $validator ['nombre'],
             'precio'=> $validator ['precio'],
             'descripcion'=> $validator ['descripcion'],
-            'lenguaje_id'=> $validator ['id_lenguaje']
+            'lenguaje_id'=> $validator ['lenguaje_id']
         ]);
 
         return back()->with('criptomonedaGuardada','Criptomoneda guardada');

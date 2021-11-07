@@ -20,7 +20,6 @@ class CreateCriptomonedaTable extends Migration
             $table->float('precio');
             $table->string('descripcion');
             $table->string('lenguaje_id');
-            $table->timestamps();
         });
     }
 

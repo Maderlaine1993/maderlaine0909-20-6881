@@ -53,6 +53,17 @@
                                 <input type="text" name="descripcion" class="form-control col-md-9">
                             </div>
 
+                            <div class=" row form-group">
+                                <label for="" class="col-2 font-weight-bold">Lenguaje</label>
+                                <select name="lenguaje_id" class="form-control col-md-9">
+                                    <option value="">--Seleccionar--</option>
+
+                                    @foreach( $lenguaje as $lenguajes)
+                                        <option value="{{$lenguajes->id_lenguaje}}"> {{$lenguajes->descripcion_lp}}  </option>
+                                    @endforeach
+                                </select>
+                            </div>
+
                             <div class="row form-group">
                                 <button type="submit" class="btn btn-success col-md-9 offset-2 font-weight-bold">Guardar</button>
                             </div>

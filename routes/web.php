@@ -30,5 +30,7 @@ Route::get('/editform/{id}', 'CriptomonedaController@editcriptomoneda') ->name('
 //Creando ruta para editar el criptomoneda
 Route::patch('/edit/{id}', 'CriptomonedaController@edit')-> name('edit');
 
+//Creando ruta del formulario de criptomonedas
+Route::get('/lenguajelist','LenguajeController@lenguajelist')->name('lenguajelist');
 
 

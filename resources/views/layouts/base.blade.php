@@ -11,16 +11,17 @@
 </head>
 
 <body>
+
 <nav class="navbar navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{url('/')}}">
+    <div class="container-fluid content-navbar">
+       <a class="navbar-brand" href="{{url('/')}}">
 
             Criptomonedas
         </a>
         <div>
             <img src="https://encuestasumgblog.files.wordpress.com/2017/04/logopngumg1.png?w=645" width="100">
         </div>
-        <a class="navbar-brand" href="{{url('/listarlenguajes')}}" >
+        <a class="navbar-brand" href="{{url('/lenguajelist')}}" >
 
             Lenguajes de Programacion
         </a>
@@ -32,7 +33,7 @@
 </div>
 
 <div class="imagen-center">
-    <img src="https://encuestasumgblog.files.wordpress.com/2017/04/logopngumg1.png?w=645">
+    <img src="https://encuestasumgblog.files.wordpress.com/2017/04/logopngumg1.png?w=645" height="140">
 </div>
 
 </body>

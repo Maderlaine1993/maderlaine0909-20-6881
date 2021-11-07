@@ -11,7 +11,7 @@
                     </div>
                 @endif
 
-            <!--Validación de errores-->
+                <!--Validación de errores-->
                 @if($errors->any())
                     <div class="alert alert-danger">
                         <ul>

@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <h2 class="text-center font-weight-bold mb-3"> Criptomonedas Guardadas </h2>
-                <a class="btn btn-success font-weight-bold mb-5" href="{{url('/form') }}"> Registrar criptomonedas </a>
+                <a class="btn btn-success font-weight-bold mb-2" href="{{url('/form') }}"> Registrar criptomonedas </a>
 
                 <!--Mensaje de Alerta-->
                 @if(session('criptomonedaEliminada'))

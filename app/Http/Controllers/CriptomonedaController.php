@@ -16,7 +16,7 @@ class CriptomonedaController extends Controller
         $criptomonedas = DB::table('criptomoneda')
             ->join('lenguaje_programacion', 'criptomoneda.lenguaje_id', '=', 'lenguaje_programacion.id_lenguaje')
             ->select('criptomoneda.*', 'lenguaje_programacion.descripcion_lp')
-            ->paginate(5);
+            ->paginate('2');
         return view('Criptomonedas.listarcriptomoneda', compact('criptomonedas'));
     }
 

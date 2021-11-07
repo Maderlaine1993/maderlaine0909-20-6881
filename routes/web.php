@@ -21,5 +21,9 @@ Route::get('/form','CriptomonedaController@criptomonedaform');
 //Creando ruta de guardar criptomonedas
 Route::post('/save', 'CriptomonedaController@save') ->name('save');
 
+//Creando ruta para eliminar criptomonedas
+Route::delete('/delete/{id}', 'CriptomonedaController@delete') ->name('delete');
+
+
 
 

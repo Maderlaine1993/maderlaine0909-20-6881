@@ -55,4 +55,14 @@ class CriptomonedaController extends Controller
         return back()->with('criptomonedaGuardada','Criptomoneda guardada');
     }
 
+    //Creamos funcion para eliminar los registros creados de criptomonedas
+    public function delete($id){
+        $criptomonedas= Criptomoneda::findOrfail($id);
+
+        if(Storage::delete('public/'.$criptomonedas->logotipo)){
+            Criptomoneda::destroy($id);
+        }
+        return back()->with('criptomonedaEliminada','Criptomoneda Eliminada');
+    }
+
 }

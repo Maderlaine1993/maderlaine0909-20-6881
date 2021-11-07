@@ -27,6 +27,17 @@
                             <td>{{$criptomoneda->precio}}</td>
                             <td>{{$criptomoneda->descripcion}}</td>
                             <td>{{$criptomoneda->descripcion_lp}}</td>
+                            <td>
+                                <div class="btn-group">
+
+                                    <form action="{{route('delete', $criptomoneda->id)}}" method="POST">
+                                        @csrf @method('DELETE')
+                                        <button type="submit" onclick="return confirm('Desea eliminar el registro')" class="btn btn-danger">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>

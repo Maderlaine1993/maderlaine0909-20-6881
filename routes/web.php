@@ -37,4 +37,4 @@ Route::get('/lenguajelist','LenguajeController@lenguajelist')->name('lenguajelis
 Route::get('/lenguajeform', 'LenguajeController@lenguajeform');
 
 //Creando ruta de guardar lenguajes
-Route::get('/savelenguaje', 'LenguajeController@savelenguaje');
+Route::post('/savelenguaje', 'LenguajeController@savelenguaje')->name('savelenguaje');

@@ -19,17 +19,17 @@ class LenguajeController extends Controller
         return view('LenguajesProgramacion.lenguajeform');
     }
 
-    public function savelenguaje(){
-        $validator = $this->validate($request,[
-            'descripcion'=> 'required'
+    public function savelenguaje(Request $request){
+
+        $validacion = $this->validate($request,[
+            'descripcion_lp'=> 'required'
         ]);
 
         Lenguaje_Programacion::create([
-            'descripcion'=> $validator ['descripcion'],
+            'descripcion_lp'=> $validacion['descripcion_lp'],
         ]);
 
         return back()->with('lenguajeGuardado','Lenguaje guardado');
     }
-
 
 }

@@ -11,7 +11,7 @@
                     </div>
                 @endif
 
-            <!--Validación de errores-->
+                <!--Validación de errores-->
                 @if($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -31,31 +31,31 @@
                         <div class="card-body">
 
                             <div class="row form-group">
-                                <label for="" class="col-2 font-weight-bold">Logotipo</label>
-                                <div class="custom-file col-md-9">
+                                <label for="" class="col-3 font-weight-bold">Logotipo</label>
+                                <div class="custom-file col-md-8">
                                     <input type="file" name="logotipo" class="custom-file-input">
                                     <label class="custom-file-label text-center" for="inputGroupFile04"> Subir Logotipo </label>
                                 </div>
                             </div>
 
                             <div class="row form-group">
-                                <label for="" class="col-2 font-weight-bold">Nombre</label>
-                                <input type="text" name="nombre" class="form-control col-md-9">
+                                <label for="" class="col-3 font-weight-bold">Nombre</label>
+                                <input type="text" name="nombre" class="form-control col-md-8">
                             </div>
 
                             <div class="row form-group">
-                                <label for="" class="col-2 font-weight-bold" >Precio</label>
-                                <input type="text" name="precio" class="form-control col-md-9">
+                                <label for="" class="col-3 font-weight-bold" >Precio</label>
+                                <input type="text" name="precio" class="form-control col-md-8">
                             </div>
 
                             <div class="row form-group">
-                                <label for="" class="col-2 font-weight-bold" >Descripcion</label>
-                                <input type="text" name="descripcion" class="form-control col-md-9">
+                                <label for="" class="col-3 font-weight-bold" >Descripcion</label>
+                                <input type="text" name="descripcion" class="form-control col-md-8">
                             </div>
 
                             <div class=" row form-group">
-                                <label for="" class="col-2 font-weight-bold">Lenguaje</label>
-                                <select name="lenguaje_id" class="form-control col-md-9">
+                                <label for="" class="col-3 font-weight-bold">Lenguaje</label>
+                                <select name="lenguaje_id" class="form-control col-md-8">
                                     <option value="">--Seleccionar--</option>
 
                                     @foreach( $lenguaje as $lenguajes)
@@ -65,7 +65,7 @@
                             </div>
 
                             <div class="row form-group">
-                                <button type="submit" class="btn btn-success col-md-9 offset-2 font-weight-bold">Guardar</button>
+                                <button type="submit" class="btn btn-success col-md-8 offset-3 font-weight-bold">Guardar</button>
                             </div>
 
                         </div>

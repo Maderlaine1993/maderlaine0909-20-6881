@@ -36,5 +36,8 @@ Route::get('/lenguajelist','LenguajeController@lenguajelist')->name('lenguajelis
 //Creando ruta para llegar al formulario
 Route::get('/lenguajeform', 'LenguajeController@lenguajeform');
 
-//Creando ruta de guardar lenguajes
+//Creando ruta de guardar lenguajes de programacion
 Route::post('/savelenguaje', 'LenguajeController@savelenguaje')->name('savelenguaje');
+
+//Creando ruta para eliminar lenguajes de programacion
+Route::delete('/deletelp/{id_lenguaje}', 'LenguajeController@deletelp') ->name('deletelp');
